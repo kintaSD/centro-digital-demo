@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Centro Digital: información, productos y contacto en un solo lugar." />
+    <title>Centro Digital | Negocio Ejemplo</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="hero" id="inicio">
+      <nav class="barra contenedor" aria-label="Navegación principal">
+        <a class="marca" href="#inicio" aria-label="Ir al inicio">
+          <span class="marca__simbolo">NE</span>
+          <span data-negocio>Negocio Ejemplo</span>
+        </a>
+        <a class="boton boton--pequeno" data-whatsapp href="#contacto">Contactar</a>
+      </nav>
+
+      <div class="hero__contenido contenedor">
+        <p class="etiqueta">Soluciones para tu negocio</p>
+        <h1 data-titulo>Productos confiables, atención directa</h1>
+        <p class="hero__texto" data-descripcion>
+          Conoce nuestros productos, cobertura y formas de atención desde un solo lugar.
+        </p>
+        <div class="acciones">
+          <a class="boton" data-whatsapp href="#contacto">Solicitar información</a>
+          <a class="boton boton--secundario" href="#productos">Ver productos</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="seccion contenedor" aria-labelledby="beneficios-titulo">
+        <p class="etiqueta">¿Por qué elegirnos?</p>
+        <h2 id="beneficios-titulo">Lo esencial, sin complicaciones</h2>
+        <div class="rejilla rejilla--tres" id="beneficios"></div>
+      </section>
+
+      <section class="seccion seccion--suave" id="productos" aria-labelledby="productos-titulo">
+        <div class="contenedor">
+          <p class="etiqueta">Catálogo</p>
+          <h2 id="productos-titulo">Productos destacados</h2>
+          <p class="introduccion">Una muestra breve de la oferta del negocio.</p>
+          <div class="rejilla rejilla--productos" id="lista-productos"></div>
+        </div>
+      </section>
+
+      <section class="seccion contenedor" id="informacion" aria-labelledby="informacion-titulo">
+        <p class="etiqueta">Información comercial</p>
+        <h2 id="informacion-titulo">Antes de contactarnos</h2>
+        <div class="panel-info" id="datos-comerciales"></div>
+      </section>
+
+      <section class="seccion seccion--oscura" id="contacto" aria-labelledby="contacto-titulo">
+        <div class="contenedor cierre">
+          <div>
+            <p class="etiqueta etiqueta--clara">Atención directa</p>
+            <h2 id="contacto-titulo">¿Listo para comenzar?</h2>
+            <p>Escríbenos y recibe información de acuerdo con lo que necesitas.</p>
+          </div>
+          <div class="cierre__acciones">
+            <a class="boton boton--claro" data-whatsapp href="#">Contactar por WhatsApp</a>
+            <a class="enlace-resena" data-resena href="#">
+              <span aria-hidden="true">⭐</span>
+              Déjanos una reseña en Google
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor pie__contenido">
+        <span>© <span id="anio"></span> <span data-negocio>Negocio Ejemplo</span></span>
+        <a href="#inicio">Centro Digital desarrollado por Kinta AI</a>
+      </div>
+    </footer>
+
+    <a class="whatsapp-flotante" data-whatsapp href="#contacto" aria-label="Contactar por WhatsApp">WA</a>
+
+    <script src="contenido.js"></script>
+  </body>
+</html>
