@@ -14,6 +14,8 @@
   box-sizing: border-box;
 }
 
+[hidden] { display: none !important; }
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,8 +41,8 @@ a {
   min-height: 78vh;
   color: var(--color-blanco);
   background:
-    radial-gradient(circle at 85% 20%, rgba(255, 202, 141, 0.28), transparent 30%),
-    linear-gradient(140deg, #201f1d 0%, #3b2720 55%, var(--color-principal-oscuro) 100%);
+    linear-gradient(90deg, rgba(20, 12, 10, 0.97) 0%, rgba(36, 17, 13, 0.93) 42%, rgba(95, 17, 13, 0.78) 70%, rgba(143, 21, 21, 0.64) 100%),
+    url("imagenes/productos/alitas.webp") center 48% / cover no-repeat;
 }
 
 .barra {
@@ -54,20 +56,25 @@ a {
 .marca {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
+  font-size: 1.08rem;
   font-weight: 800;
   text-decoration: none;
 }
 
 .marca__simbolo {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 84px;
+  height: 84px;
   place-items: center;
-  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
   color: var(--color-texto);
-  background: var(--color-blanco);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 3px;
 }
+
+.marca__simbolo img { width: 100%; height: 100%; border-radius: inherit; object-fit: contain; }
 
 .hero__contenido {
   display: grid;
@@ -209,6 +216,20 @@ h2 {
   color: var(--color-principal-oscuro);
   background: linear-gradient(135deg, #ffe2c8, #f4c29b);
   font-weight: 800;
+  width: calc(100% + 44px);
+  object-fit: cover;
+}
+
+.producto__imagen--vacia { width: auto; }
+
+.producto__categoria {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--color-principal);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .producto__meta {
@@ -226,6 +247,12 @@ h2 {
   border: 1px solid var(--color-borde);
   border-radius: var(--radio);
 }
+
+.galeria { display: grid; gap: 16px; margin-top: 28px; }
+.foto { margin: 0; overflow: hidden; border-radius: var(--radio); background: var(--color-blanco); box-shadow: var(--sombra); }
+.foto img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.foto figcaption { padding: 12px 16px; color: #625d57; font-size: 0.88rem; }
+.boton--mapa { margin-top: 12px; }
 
 .dato {
   display: grid;
@@ -248,6 +275,21 @@ h2 {
   display: grid;
   gap: 28px;
   align-items: center;
+}
+
+.cierre__identidad {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+}
+
+.cierre__logo {
+  display: block;
+  width: 142px;
+  height: 142px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3));
 }
 
 .cierre p:not(.etiqueta) {
@@ -330,9 +372,15 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .rejilla--productos .producto:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+
   .panel-info {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .galeria { grid-template-columns: repeat(3, 1fr); }
 
   .dato:nth-child(odd) {
     border-right: 1px solid var(--color-borde);
@@ -357,6 +405,32 @@ h2 {
 }
 
 @media (max-width: 430px) {
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(20, 12, 10, 0.9) 0%, rgba(58, 19, 15, 0.86) 58%, rgba(143, 21, 21, 0.76) 100%),
+      url("imagenes/productos/alitas.webp") 58% center / cover no-repeat;
+  }
+
+  .marca {
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .marca__simbolo {
+    width: 66px;
+    height: 66px;
+    border-radius: 15px;
+  }
+
+  .cierre__identidad {
+    grid-template-columns: 1fr;
+  }
+
+  .cierre__logo {
+    width: 112px;
+    height: 112px;
+  }
+
   .barra .boton {
     display: none;
   }
