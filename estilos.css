@@ -42,7 +42,7 @@ a {
   color: var(--color-blanco);
   background:
     linear-gradient(90deg, rgba(20, 12, 10, 0.97) 0%, rgba(36, 17, 13, 0.93) 42%, rgba(95, 17, 13, 0.78) 70%, rgba(143, 21, 21, 0.64) 100%),
-    url("imagenes/productos/alitas.webp") center 48% / cover no-repeat;
+    url("imagenes/productos/alitas-adobadas.webp") center 48% / cover no-repeat;
 }
 
 .barra {
@@ -64,8 +64,8 @@ a {
 
 .marca__simbolo {
   display: grid;
-  width: 84px;
-  height: 84px;
+  width: 97px;
+  height: 97px;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 18px;
@@ -239,6 +239,140 @@ h2 {
   font-weight: 800;
 }
 
+.seccion--proceso {
+  color: var(--color-blanco);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(214, 40, 40, 0.22), transparent 34%),
+    #201f1d;
+}
+
+.seccion--proceso .introduccion {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.proceso {
+  display: grid;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.proceso__etapa {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radio);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.proceso__imagen-wrap {
+  position: relative;
+}
+
+.proceso__imagen {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.proceso__numero {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 50%;
+  color: var(--color-blanco);
+  background: rgba(20, 12, 10, 0.76);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.proceso__contenido {
+  padding: 18px;
+}
+
+.proceso__contenido h3 {
+  margin: 0 0 7px;
+  font-size: 1.06rem;
+  line-height: 1.25;
+}
+
+.proceso__contenido p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+}
+
+.servicio-domicilio {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  border-radius: calc(var(--radio) + 4px);
+  background: var(--color-suave);
+  box-shadow: var(--sombra);
+}
+
+#servicio-domicilio {
+  padding-block: 52px;
+}
+
+.servicio-domicilio__contenido {
+  padding: clamp(24px, 4vw, 36px);
+}
+
+.servicio-domicilio__contenido h2 {
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+}
+
+.servicio-domicilio__opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.servicio-domicilio__opcion {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  background: var(--color-blanco);
+  color: #4f4a45;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.servicio-domicilio__opcion span {
+  font-size: 1.05rem;
+}
+
+.servicio-domicilio__boton {
+  width: fit-content;
+  min-height: 46px;
+  padding: 10px 18px;
+}
+
+.servicio-domicilio__nota {
+  margin: 10px 0 0;
+  color: #736d66;
+  font-size: 0.78rem;
+}
+
+.servicio-domicilio__imagen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 330px;
+  object-fit: contain;
+  object-position: center;
+  background: #fbf9f4;
+}
+
 .panel-info {
   display: grid;
   gap: 0;
@@ -366,6 +500,13 @@ h2 {
   text-decoration: none;
 }
 
+.whatsapp-flotante__icono {
+  display: block;
+  width: 29px;
+  height: 29px;
+  fill: currentColor;
+}
+
 @media (min-width: 700px) {
   .rejilla--tres,
   .rejilla--productos {
@@ -381,6 +522,12 @@ h2 {
   }
 
   .galeria { grid-template-columns: repeat(3, 1fr); }
+
+  .proceso { grid-template-columns: repeat(2, 1fr); }
+
+  .servicio-domicilio {
+    grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+  }
 
   .dato:nth-child(odd) {
     border-right: 1px solid var(--color-borde);
@@ -404,11 +551,15 @@ h2 {
   }
 }
 
+@media (min-width: 1040px) {
+  .proceso { grid-template-columns: repeat(4, 1fr); }
+}
+
 @media (max-width: 430px) {
   .hero {
     background:
       linear-gradient(180deg, rgba(20, 12, 10, 0.9) 0%, rgba(58, 19, 15, 0.86) 58%, rgba(143, 21, 21, 0.76) 100%),
-      url("imagenes/productos/alitas.webp") 58% center / cover no-repeat;
+      url("imagenes/productos/alitas-adobadas.webp") 58% center / cover no-repeat;
   }
 
   .marca {
@@ -437,6 +588,18 @@ h2 {
 
   .acciones .boton {
     width: 100%;
+  }
+
+  .servicio-domicilio__boton {
+    width: 100%;
+  }
+
+  .servicio-domicilio__imagen {
+    max-height: 230px;
+  }
+
+  #servicio-domicilio {
+    padding-block: 44px;
   }
 }
 
