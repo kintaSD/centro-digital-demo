@@ -21,7 +21,7 @@ const negocio = {
   contacto: {
     whatsapp: "525561325072", // Código de país + número, sin +, espacios ni guiones.
     mensajeWhatsApp: "Hola, vi la Página Comercial de Las Alitas Locas y quisiera cotizar un pedido.",
-    enlaceResenaGoogle: "https://www.google.com/maps/place/Las+Alitas+Locas/@19.5242079,-99.1937342,17z/data=!4m6!3m5!1s0x85d203277cd9d8ff:0xc7f460b3b995d28a!8m2!3d19.5242079!4d-99.1937342!16s%2Fg%2F11q2vx0v_5!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D",
+    enlaceResenaGoogle: "https://g.page/r/CYrSlbmzYPTHEBM/review",
     enlaceGoogleMaps: "https://maps.app.goo.gl/Bad7yPvqwBQPnMMU9",
   },
   secciones: {
